@@ -1,0 +1,7 @@
+
+arr = [1, 2, 3, 4, 4]
+n = len(arr)
+sum_arr = sum(arr)
+sum_num = (n - 1) * n // 2
+diff = sum_arr - sum_num
+print("The repetitive element is: ", diff)
