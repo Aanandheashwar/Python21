@@ -1,0 +1,8 @@
+def product_of_extremes(arr1, arr2):
+    max_element_arr1 = max(arr1)
+    min_element_arr2 = min(arr2)
+    product = max_element_arr1 * min_element_arr2
+    return product
+arr1 = [1, 2, 3]
+arr2 = [4, 5, 6]
+print("The product of the maximum element of the first array and the minimum element of the second array is: ", product_of_extremes(arr1, arr2))
