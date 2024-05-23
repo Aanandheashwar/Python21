@@ -1,0 +1,30 @@
+
+def find_largest_smallest(numbers):
+    largest = numbers[0]
+    smallest = numbers[0]
+
+    for num in numbers:
+        if num > largest:
+            largest = num
+        if num < smallest:
+            smallest = num
+
+    return largest, smallest
+
+def get_elements():
+    numbers = []
+
+    n = int(input("Enter the number of elements: "))
+r
+    for i in range(n):
+        num = float(input("Enter element {}: ".format(i+1)))
+        numbers.append(num)
+
+    return numbers
+
+numbers = get_elements()
+
+largest, smallest = find_largest_smallest(numbers)
+
+print("Largest element: ", largest)
+print("Smallest element: ", smallest)
