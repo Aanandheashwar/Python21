@@ -1,0 +1,44 @@
+
+def display_elements(numbers):
+ 
+    for i, num in enumerate(numbers):
+        print("Element {}: {}".format(i+1, num))
+
+def insert_number(numbers, index, num):
+    
+    numbers.insert(index, num)
+
+def delete_number(numbers, index):
+   
+    del numbers[index]
+
+def get_elements():
+    numbers = []
+
+    n = int(input("Enter the number of elements: "))
+
+    for i in range(n):
+        num = float(input("Enter element {}: ".format(i+1)))
+        numbers.append(num)
+
+    return numbers
+
+numbers = get_elements()
+
+print("Original elements:")
+display_elements(numbers)
+
+index = int(input("Enter the location to insert the number: "))
+num = float(input("Enter the number to insert: "))
+
+insert_number(numbers, index, num)
+
+print("Updated elements after insertion:")
+display_elements(numbers)
+
+index = int(input("Enter the location to delete a number: "))
+
+delete_number(numbers, index)
+
+print("Updated elements after deletion:")
+display_elements(numbers)
