@@ -1,0 +1,51 @@
+
+def calculate_mean(numbers):
+
+    sum = 0
+    for num in numbers:
+        sum += num
+
+    mean = sum / len(numbers)
+
+    return mean
+
+def calculate_deviation(numbers, mean):
+    
+    deviations = []
+    for num in numbers:
+        deviation = num - mean
+        deviations.append(deviation)
+
+    deviation = sum(deviations) / len(numbers)
+
+    return deviation
+
+def calculate_variance(numbers, mean):
+   
+    variance = sum([(num - mean) ** 2 for num in numbers]) / len(numbers)
+
+    return variance
+
+def get_elements():
+
+    numbers = []
+
+    n = int(input("Enter the number of elements: "))
+
+    for i in range(n):
+        num = float(input("Enter element {}: ".format(i+1)))
+        numbers.append(num)
+
+    return numbers
+
+numbers = get_elements()
+
+mean = calculate_mean(numbers)
+
+deviation = calculate_deviation(numbers, mean)
+
+variance = calculate_variance(numbers, mean)
+
+print("Mean: {:.2f}".format(mean))
+print("Deviation: {:.2f}".format(deviation))
+print("Variance: {:.2f}".format(variance))
