@@ -1,0 +1,6 @@
+
+numbers = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+sum = 0
+for num in numbers:
+    sum += num
+print("Sum of array elements: ", sum)
